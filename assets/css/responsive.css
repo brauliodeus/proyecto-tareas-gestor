@@ -70,7 +70,8 @@
     textarea#descripcion {
         width: 100%;        
         min-width: 100%;
-        box-sizing: border-box; 
+        box-sizing: border-box;
+        height: 300px;
     }
 }
 
@@ -104,6 +105,20 @@
     .columnacompletado {
         flex: 1 1 calc(50% - 0.75rem);
         min-width: 240px;
+    }
+
+    .formulario {
+        padding: 1.5rem;
+    }
+
+    textarea#descripcion {
+        height: 250px;
+    }
+
+    div.desc-container {
+        width: 100%;
+        min-width: 100%;
+        flex: 1 1 100%;
     }
 }
 
