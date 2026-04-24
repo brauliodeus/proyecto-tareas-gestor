@@ -1,0 +1,138 @@
+/* Celular */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .tituloweb {
+        font-size: 1.3rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+        margin-right: 0;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    .container {
+        padding: 1rem 0.75rem;
+    }
+
+    .form-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tarea-btn {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        align-self: stretch;
+    }
+
+    .kanban {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .columnapendiente,
+    .columnaprogreso,
+    .columnacompletado {
+        width: 100%;
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    footer {
+        padding: 1rem 0.75rem;
+    }
+
+    .formulario {
+        padding: 1rem;
+    }
+
+    .form-container > .desc-container {
+        width: 100%;        
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    textarea#descripcion {
+        width: 100%;        
+        min-width: 100%;
+        box-sizing: border-box; 
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .tituloweb {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .kanban {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .columnapendiente,
+    .columnaprogreso,
+    .columnacompletado {
+        flex: 1 1 calc(50% - 0.75rem);
+        min-width: 240px;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+    .form-container {
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .tarea-btn {
+        margin-top: 0;
+    }
+
+    .desc-container {
+        width: auto;
+    }
+
+    .kanban {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .columnapendiente,
+    .columnaprogreso,
+    .columnacompletado {
+        width: 32%;
+        flex: 0 1 32%;
+        min-width: 300px;
+    }
+}

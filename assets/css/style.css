@@ -1,0 +1,313 @@
+:root {
+    --color-primario: #2563eb;
+    --color-secundario: #7c3aed;
+    --color-terciario: #10b981;
+    --color-pendiente: #3b82f6;
+    --color-progreso: #f59e0b;
+    --color-completado: #10b981;
+    --fuente-principal: 'Segoe UI', system-ui, sans-serif;
+    --tamano-base: 16px;
+    --espacio-xs: 0.5rem;
+    --espacio-sm: 1rem;
+    --espacio-md: 1.5rem;
+    --espacio-lg: 2rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: #EBF1FF;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: var(--espacio-md) 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--espacio-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espacio-md);
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: var(--espacio-md);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.tituloweb {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-lg);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--tamano-base);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espacio-md);
+    flex: 1;
+}
+
+.titulo {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: var(--espacio-md);
+    border-radius: 14px;
+    border: 1px solid #dadada;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-container > .desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1 1 240px;
+    min-width: 240px;
+}
+
+.form-container > .desc-container:first-child {
+    flex: 2 1 320px;
+}
+
+.tarea-btn {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--tamano-base);
+    margin-top: var(--espacio-sm);
+    transition: all 0.3s ease;
+    align-self: flex-end;
+    margin-left: auto;
+    width: auto;
+}
+
+textarea {
+    padding: 0.8rem;
+    height: 50px;
+    width: 100%;
+    min-width: 0;
+    overflow-y: hidden;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: var(--tamano-base);
+    resize: none;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    justify-content: center;
+    display: block;
+}
+
+textarea#descripcion {
+    text-align: center;
+    line-height: 25px;
+    display: block;
+    width: 100%;
+}
+
+.selector {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: var(--tamano-base);
+    background-color: whitesmoke;
+}
+
+.tarea-btn:hover {
+    background-color: #1e40af;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+.kanban {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: var(--espacio-lg);
+    justify-content: space-between;
+}
+
+.columnapendiente,
+.columnaprogreso,
+.columnacompletado {
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex: 1 1 300px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.columnapendiente h3,
+.columnaprogreso h3,
+.columnacompletado h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.tareas-container {
+    min-height: 8rem;
+}
+
+.contador {
+    color: var(--color-primario);
+    background-color: rgba(37, 99, 235, 0.1);
+    border-radius: 20px;
+    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+}
+
+.btn-mover,
+.btn-eliminar {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+}
+
+.btn-mover {
+    background-color: var(--color-terciario);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-mover:hover {
+    background-color: #29e49f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(41, 228, 159, 0.3);
+}
+
+.btn-eliminar {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+}
+
+.tarea-pendiente,
+.tarea-progreso,
+.tarea-completado {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: var(--espacio-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-left: 4px solid transparent;
+}
+
+.tarea-pendiente:hover,
+.tarea-progreso:hover,
+.tarea-completado:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: var(--espacio-md);
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+}
+
+footer a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.columnapendiente{
+    border-color: var(--color-pendiente);
+}
+
+.columnaprogreso{
+    border-color: var(--color-progreso);
+}
+
+.columnacompletado{
+    border-color: var(--color-completado);
+}

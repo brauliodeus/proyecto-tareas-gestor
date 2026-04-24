@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de tareas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <img src="assets/img/logo.png" alt="Logo del gestor de tareas" class="logo">
+            <h2 class="tituloweb">Gestor de tareas</h2>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tareas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+            <form action="" class="formulario" id="formulariotareas">
+                <h2 class="titulo">Agregar Nueva Tarea</h2>
+                <div class="form-container">
+                    <div class="desc-container">
+                        <label for="descripcion">Descripción:</label>  
+                        <textarea id="descripcion" required placeholder="¿Qué necesitas hacer?"></textarea>  
+                    </div>
+                    <div class="desc-container">
+                        <label for="prioridad">Prioridad:</label>  
+                        <select id="prioridad" required class="selector">  
+                            <option value="">Seleccionar...</option>  
+                            <option value="alta">Alta</option>  
+                            <option value="media">Media</option>  
+                            <option value="baja">Baja</option>  
+                        </select> 
+                    </div>
+                    <div class="desc-container">
+                        <label for="fecha">Fecha límite:</label>  
+                        <input type="date" id="fecha" required class="selector">
+                    </div>
+                    <button type="submit" class="tarea-btn">Agregar Tarea</button>  
+                </div>  
+                 
+                
+                
+ 
+            </form>
+            <div class="kanban">
+            <div class="columnapendiente" id="pendientes">  
+                <h3>Pendientes: <span class="contador" id="c-pendiente">0</span></h3>  
+                <div class="tareas-container" id="pendientes-container"></div>  
+            </div>
+
+            <div class="columnaprogreso" id="en-progreso">  
+                <h3>En Progreso: <span class="contador" id="c-progreso">0</span></h3>  
+                <div class="tareas-container" id="en-progreso-container"></div>  
+            </div>  
+
+            <div class="columnacompletado" id="completadas">  
+                <h3>Completadas: <span class="contador" id="c-completadas">0</span></h3>  
+                <div class="tareas-container" id="completadas-container"></div>  
+            </div>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Github: <a href="https://github.com/brauliodeus" target="_blank">brauliodeus</a>
+            </p>
+        </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
